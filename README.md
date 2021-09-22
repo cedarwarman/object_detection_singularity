@@ -13,6 +13,6 @@ Then run:
 ## Running the demo
 To run the demo with X11 forwarding and error message suppression:
 
-    singularity exec --nv -B ./singularity/tf_od.sif python3 ./python/eager_few_shot_od_training_tf2_singularity.py &>/dev/null &
+    singularity exec --nv -B ~/.Xauthority ./singularity/tf_od.sif python3 ./python/eager_few_shot_od_training_tf2_singularity.py &>/dev/null &
 
 I use this in an HPC environment, so putting it in the background and suppressing messages allows me to monitor the progress with `nvtop` or `nvidia-smi` in the same window. Adjust to suit your needs.
